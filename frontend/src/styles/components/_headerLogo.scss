@@ -1,0 +1,41 @@
+.logo {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 50px;
+  align-items: center;
+  justify-items: center;
+
+  .ctn-logo {
+    grid-column: 2;
+    background-color: #fff;
+    border-radius: 0px 0px 20px 20px;
+
+    img {
+      max-width: 250px;
+      height: auto;
+      margin: 10px 20px;
+    }
+  }
+}
+
+.signup {
+  .ctn-logo {
+    grid-column: 1;
+  }
+}
+
+/* RESPONSIVE TABLET */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .logo {
+    grid-template-columns: 100%;
+
+    .ctn-logo {
+      grid-column: 1;
+
+      img {
+        max-width: 200px;
+        margin: 10px 20px;
+      }
+    }
+  }
+}

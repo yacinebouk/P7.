@@ -1,0 +1,189 @@
+.ctn-card {
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 100px;
+  box-shadow: 0px 2px 5px 0px rgba(78, 81, 102, 0.25);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .user-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px 0px rgba(78, 81, 102, 0.25);
+
+    img {
+      height: 70px;
+      width: 70px;
+      object-fit: cover;
+    }
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+h3 {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-img {
+  margin: auto auto;
+  border-radius: 20px;
+}
+
+.update-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-modif,
+.icon-del {
+  font-size: 20px;
+  margin-left: 15px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.icon-del,
+.like-icon,
+.icon-modif {
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.icon-del {
+  background-color: #db2b2b;
+  &:hover {
+    background-color: #a92424;
+  }
+}
+
+.icon-modif {
+  background-color: #39db2b;
+  &:hover {
+    background-color: #2fae24;
+  }
+}
+
+.like-container {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.like-icon,
+.unlike-icon {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: $ter-col;
+  color: $pri-col;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.unlike-icon {
+  background-color: $ter-col;
+  color: #fff;
+  &:hover {
+    color: $pri-col;
+  }
+}
+
+.like-num {
+  font-weight: 700;
+  margin: 0px 10px;
+}
+
+.update-post {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  textarea {
+    width: 95%;
+    height: 100px;
+    border: 1px solid $pri-col;
+    padding: 10px;
+    border-radius: 20px;
+    resize: none;
+    margin-bottom: 10px;
+  }
+  .btn-container {
+    .btn {
+      background: $pri-col;
+      margin-top: 10px;
+    }
+    .btn-modif {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* RESPONSIVE TABLET */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .icon-modif,
+  .icon-del {
+    font-size: 20px;
+    margin-left: 10px;
+    padding: 8px;
+  }
+}
+
+/* RESPONSIVE MOBILE */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .ctn-card {
+    margin: 15px 50px;
+  }
+
+  .card-header {
+    .user {
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+    }
+
+    h2 {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  }
+
+  .icon-modif,
+  .icon-del {
+    font-size: 20px;
+    margin-left: 10px;
+    padding: 8px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .post-img {
+    margin: 0px 0px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+}
