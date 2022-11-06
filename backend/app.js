@@ -1,12 +1,12 @@
 import bodyparser from 'body-parser'
 import cookieParser from 'cookie-parser'
 import express, { json as _json, urlencoded } from 'express'
+import * as dotenv from 'dotenv';
 
-const app = express()
+
 import { connect } from 'mongoose'
 import { crossOriginResourcePolicy } from 'helmet'
 import { join } from 'path'
-import cors from 'cors'
 
 //import du routeur utilisateur
 import userRoutes from './routes/user.routes.js'
@@ -16,6 +16,9 @@ import postRoutes from './routes/post.routes.js'
 import { checkTokenUser, requireAuth } from './middlewares/auth.js'
 import path from 'path'
 import { fileURLToPath } from 'url'
+
+dotenv.config()
+const app = express()
 
 const __filename = fileURLToPath(import.meta.url)
 

@@ -4,9 +4,13 @@ import jwt from 'jsonwebtoken'
 import crypto from 'crypto-js'
 import User from '../models/user.model.js'
 import { signupErrors, loginErrors } from '../middlewares/errors.js'
+import * as dotenv from 'dotenv';
+
+dotenv.config();
+
 
 // Variables d'environnement
-const secretToken = "test"
+const secretToken = process.env.SECRET_TOKEN
 
 // Création du token encrypté pour une durée de 12h
 const maxAge = 12 * 60 * 60 * 1000
@@ -17,7 +21,7 @@ const createToken = (id) => {
 }
 
 // Enregistrement des utilisateurs
-export function signup (req, res) {
+export function signup(req, res) {
   //Chiffrage de l'adresse email
   const emailCryptoJs = crypto.HmacSHA256(req.body.email, 'yassinep7email')
     .toString()
@@ -44,7 +48,7 @@ export function signup (req, res) {
 }
 
 // Connexion des utilisateurs
-export function login (req, res) {
+export function login(req, res) {
   //Chiffrage de l'adresse email
   const emailCryptoJs = crypto.HmacSHA256(req.body.email, 'yassinep7email')
     .toString()
@@ -85,7 +89,7 @@ export function login (req, res) {
 }
 
 // Déconnection des utilisateurs
-export function logout (req, res) {
+export function logout(req, res) {
   // Le cookie créé lors de la connection est retiré en 1ms et renvoie l'utilisateur vers la page d'accueil
   res.cookie('jwt', '', { maxAge: 1 })
   res.redirect('/')
