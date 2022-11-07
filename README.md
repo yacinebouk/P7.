@@ -16,20 +16,28 @@ Pour utiliser l'application, il faudra installer sur votre machine:
 - Clonez les dossiers "frontend" et "backend" en exécutant la commande suivante:
 <pre><code>git clone https://github.com/yacinebouk/P7 </code></pre>
 
-#### 2. Installation du dossier Frontend
+### 2. installation unbuntu
+
+-intallez unbuntu sur votre machine.
+
+-ensuite placez le projet dans votre dossier unbuntu.
+
+-puis executez votre projet via unbuntu dans votre terminal.
+#### 3. Installation du dossier Frontend
 
 - Ouvrez un terminal à partir du sous-répertoire **frontend** depuis votre IDE
 - Exécutez la commande `npm install`
 - Lancez l'application en exécutant la commande `npm start`
 
-#### 3. Installation du dossier Backend
+#### 4. Installation du dossier Backend
 
 - Ouvrez un terminal à partir du sous-répertoire **backend** et exécutez la commande `npm install` afin d'installer toutes les dépendances.
 
-- Une fois les dépendances installées, veuillez exécuter la commande `nodemon server` afin de lancer le serveur.
+- Une fois les dépendances installées, veuillez exécuter la commande `npm start` afin de lancer le serveur.
+
 - Se connecter via les identifiants fournis dans le fichier TXT.
 
-#### 4. Configuration des variables d'environnement
+#### 5. Configuration des variables d'environnement
 
 A la racine du dossier "backend", veuillez créer un ficher `.env` en suivant l'exemple du fichier `.env_example`. Ce fichier servira à renseigner votre identifiant et mot de passe MongoDB ainsi que les différentes chaînes de cryptage.
 
