@@ -1,0 +1,99 @@
+body.profile {
+  h1 {
+    margin: 15px 0px;
+    color: $ter-col;
+  }
+
+  #modal-title {
+    color: #fff;
+  }
+  .card-profile,
+  .profile-img,
+  .upload-pic,
+  .upload-pic-send {
+    box-shadow: 0px 2px 5px 0px rgba(78, 81, 102, 0.25);
+  }
+
+  .card-profile {
+    display: grid;
+    justify-items: center;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 0px 30px;
+  }
+
+  .profile-img {
+    max-width: 250px;
+    max-height: 250px;
+    overflow: hidden;
+    border-radius: 10%;
+    margin-bottom: 20px;
+
+    img {
+      object-position: -40px -40px;
+    }
+  }
+
+  .upload-form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .upload-pic,
+  .upload-pic-send {
+    background-color: $ter-col;
+    color: $sec-col;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $pri-col;
+    }
+  }
+
+  .upload-pic-send {
+    background-color: $sec-col;
+    color: $ter-col;
+    margin-left: 20px;
+    border: none;
+  }
+
+  .upload-pic-send:disabled {
+    background-color: #e0e0e0;
+    color: #7d7d7d;
+    cursor: not-allowed;
+    &:hover {
+      color: none;
+    }
+  }
+
+  .input-img {
+    display: none;
+    visibility: none;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h2,
+  h3 {
+    margin: 10px 0;
+  }
+
+  p{
+    margin: 5px 0px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+  body.profile{
+    h1{
+      font-size: 20px;
+    }
+  }
+}
