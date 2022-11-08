@@ -33,7 +33,7 @@ app.use(crossOriginResourcePolicy({ policy: 'same-site' }))
 
 //connexion au serveur mongoDB
 connect(
-  'mongodb+srv://DB_USERNAME:DB_PASSWORD@DB_CLUSTER/?retryWrites=true&w=majority',
+  'mongodb+srv://process.env.DB_USERNAME:DB_PASSWORD@DB_CLUSTER/?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true }
 )
   .then(() => console.log('Connexion à MongoDB réussie ! '))
