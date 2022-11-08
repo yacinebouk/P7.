@@ -36,8 +36,7 @@ connect(
   'mongodb+srv://?:?@?/?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true }
 )
-  .then(() => console.log('Connexion à MongoDB réussie ! '
-    + process.env.SECRET_TOKEN))
+  .then(() => console.log('Connexion à MongoDB réussie ! '))
   .catch(() => console.log('Connexion à MongoDB échouée !'))
 
 app.use((req, res, next) => {

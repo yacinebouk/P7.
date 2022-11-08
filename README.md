@@ -37,7 +37,7 @@ A la racine du dossier "backend", veuillez créer un ficher `.env` (ici le fichi
 - Le fichier .env contient les variables d'environnement suivants:
   - DB_USERNAME=yass
   - DB_PASSWORD=yacine59
-  - DB_CLUSTER=cluster0
+  - DB_CLUSTER=cluster0.gtfnfom.mongodb.net
   - CRYPTOJS_KEY_EMAIL=yassinep7email
   - JWT_KEY=(chaîne de caractères aléatoire)
   - SECRET_TOKEN=(chaîne de caractères aléatoire)
