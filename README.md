@@ -16,13 +16,13 @@ Pour utiliser l'application, il faudra installer sur votre machine:
 - Clonez les dossiers "frontend" et "backend" en exécutant la commande suivante:
 <pre><code>git clone https://github.com/yacinebouk/P7 </code></pre>
 
-#### 3. Installation du dossier Frontend
+#### 2. Installation du dossier Frontend
 
 - Ouvrez un terminal à partir du sous-répertoire **frontend** depuis votre IDE
 - Exécutez la commande `npm install`
 - Lancez l'application en exécutant la commande `npm start`
 
-#### 4. Installation du dossier Backend
+#### 3. Installation du dossier Backend
 
 - Ouvrez un terminal à partir du sous-répertoire **backend** et exécutez la commande `npm install` afin d'installer toutes les dépendances.
 
@@ -30,28 +30,29 @@ Pour utiliser l'application, il faudra installer sur votre machine:
 
 - Se connecter via les identifiants fournis dans le fichier TXT.
 
-#### 5. Configuration des variables d'environnement
+#### 4. Configuration des variables d'environnement
 
-A la racine du dossier "backend", veuillez créer un ficher `.env` en suivant l'exemple du fichier `.env_example`. Ce fichier servira à renseigner votre identifiant et mot de passe MongoDB ainsi que les différentes chaînes de cryptage.
+A la racine du dossier "backend", veuillez créer un ficher `.env` (ici le fichier env. est fournis avec les informations correspondantes pour vous permettre de tester l'application, cependant il est normalement interdit de les fournirs pour permettre une sécurité au niveau de l'application)
 
 - Le fichier .env contient les variables d'environnement suivants:
-  - DB_USERNAME (identifiant de connexion à la base de données)
-  - DB_PASSWORD (mot de passe de connexion à la base de données)
-  - DB_CLUSTER (nom du cluster)
-  - CRYPTOJS_KEY_EMAIL (chaîne de caractères aléatoire)
-  - JWT_KEY (chaîne de caractères aléatoire)
-  - SECRET_TOKEN (chaîne de caractères aléatoire)
+  - DB_USERNAME=yass
+  - DB_PASSWORD=yacine59
+  - DB_CLUSTER=cluster0
+  - CRYPTOJS_KEY_EMAIL=yassinep7email
+  - JWT_KEY=(chaîne de caractères aléatoire)
+  - SECRET_TOKEN=(chaîne de caractères aléatoire)
+
 
 **Le ficher `.env` à la racine du dossier "frontend", correspond à l'url du backend afin de faire des requêtes API. Cette application utilise l'url `http://localhost:5000` .**
 
-#### 6. Environnement de développement
+#### 5. Environnement de développement
 
 - Utilisation de **MongoDB** pour l'hébergement et la gestion de la base de données
 - Utilisation du framework **Express**
 - Utilisation du framework frontend **React**
 - Utilisation du runtime **Node.js**
 
-#### 7. Dépendances utilisées dans le frontend
+#### 6. Dépendances utilisées dans le frontend
 
 - **axios :** crypte et hashe les mots de passe
 - **dotenv :** permet l'utilisation de variables d'environnement
@@ -64,7 +65,7 @@ A la racine du dossier "backend", veuillez créer un ficher `.env` en suivant l'
 - **redux :** est une bibliothèque fournissant un conteneur d'état "predictable state container"
 - **redux-thunk :** est un middleware pour Redux permettant d'envoyer des actions en faisant des dispatchs
 
-#### 8. Dépendances utilisées dans le backend
+#### 7changeemnbt. Dépendances utilisées dans le backend
 
 - **bcrypt :** crypte et hashe les mots de passe
 - **body-parser :** analyse le corps des requêtes

@@ -9,13 +9,11 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 
-// Variables d'environnement
-const secretToken = process.env.SECRET_TOKEN
 
 // Création du token encrypté pour une durée de 12h
 const maxAge = 12 * 60 * 60 * 1000
 const createToken = (id) => {
-  return jwt.sign({ id }, secretToken, {
+  return jwt.sign({ id }, process.env.SECRET_TOKEN, {
     expiresIn: maxAge,
   })
 }

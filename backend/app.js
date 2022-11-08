@@ -33,10 +33,11 @@ app.use(crossOriginResourcePolicy({ policy: 'same-site' }))
 
 //connexion au serveur mongoDB
 connect(
-  'mongodb+srv://yass:yacine59@cluster0.gtfnfom.mongodb.net/?retryWrites=true&w=majority',
+  'mongodb+srv://?:?@?/?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true }
 )
-  .then(() => console.log('Connexion à MongoDB réussie !'))
+  .then(() => console.log('Connexion à MongoDB réussie ! '
+    + process.env.SECRET_TOKEN))
   .catch(() => console.log('Connexion à MongoDB échouée !'))
 
 app.use((req, res, next) => {
