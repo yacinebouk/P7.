@@ -109,7 +109,7 @@ export async function updatePost(req, res) {
         req.file.stream,
         // chemin où sont stockées les images
         createWriteStream(
-          `${dirname.replace('backend', 'frontend')}/public/uploads/posts/${fileName}`
+          `${dirname.replace('backend', 'frontend')}/public/uploads/posts/${newFileName}`
         )
       );
 
