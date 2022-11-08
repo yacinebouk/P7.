@@ -8,8 +8,6 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-
-
 // Création du token encrypté pour une durée de 12h
 const maxAge = 12 * 60 * 60 * 1000
 const createToken = (id) => {
@@ -21,7 +19,7 @@ const createToken = (id) => {
 // Enregistrement des utilisateurs
 export function signup(req, res) {
   //Chiffrage de l'adresse email
-  const emailCryptoJs = crypto.HmacSHA256(req.body.email, 'yassinep7email')
+  const emailCryptoJs = crypto.HmacSHA256(req.body.email, process.env.CRYPTOJS_KEY_EMAIL)
     .toString()
   // Hachage de l'adresse email
   _hash(req.body.password, 10)
@@ -48,7 +46,7 @@ export function signup(req, res) {
 // Connexion des utilisateurs
 export function login(req, res) {
   //Chiffrage de l'adresse email
-  const emailCryptoJs = crypto.HmacSHA256(req.body.email, 'yassinep7email')
+  const emailCryptoJs = crypto.HmacSHA256(req.body.email, process.env.CRYPTOJS_KEY_EMAIL)
     .toString()
   // Recherche de l'utilisateur dans la base de données
   User.findOne({ email: emailCryptoJs })
