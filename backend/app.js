@@ -23,8 +23,6 @@ const app = express()
 const __filename = fileURLToPath(import.meta.url)
 
 export const dirname = path.dirname(__filename)
-
-
 app.use(bodyparser.json())
 app.use(cookieParser())
 app.use(_json())
@@ -33,11 +31,12 @@ app.use(crossOriginResourcePolicy({ policy: 'same-site' }))
 
 //connexion au serveur mongoDB
 connect(
-  'mongodb+srv://process.env.DB_USERNAME:DB_PASSWORD@DB_CLUSTER/?retryWrites=true&w=majority',
+  'mongodb+srv://' + process.env.DB_USERNAME + ':' + process.env.DB_PASSWORD + '@' + process.env.DB_CLUSTER + '/?retryWrites=true&w=majority',
   { useNewUrlParser: true, useUnifiedTopology: true }
 )
-  .then(() => console.log('Connexion à MongoDB réussie ! '))
+  .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'))
+
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
