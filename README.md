@@ -1,13 +1,13 @@
 # PROJET N°7 - CREEZ UN RESEAU SOCIAL D'ENTREPRISE
 
-### INSTALLATION
+## <u>INSTALLATION</u>
 
 Pour utiliser l'application, il faudra installer sur votre machine:
 
 - NodeJS 14.18.0 ou +
 - React 18.2 ou +
 
-#### 1. Copie des dossiers Frontend et Backend
+## 1. <u>Copie des dossiers Frontend et Backend</u>
 
 - Créer un dossier vide qui contiendra le projet, regroupé dans deux dossiers (un dossier frontend et un dossier backend).
 
@@ -16,43 +16,50 @@ Pour utiliser l'application, il faudra installer sur votre machine:
 - Clonez les dossiers "frontend" et "backend" en exécutant la commande suivante:
 <pre><code>git clone https://github.com/yacinebouk/P7 </code></pre>
 
-#### 2. Installation du dossier Frontend
+## 2. <u>Installation du dossier Frontend</u>
 
 - Ouvrez un terminal à partir du sous-répertoire **frontend** depuis votre IDE
 - Exécutez la commande `npm install`
-- Lancez l'application en exécutant la commande `npm start`
 
-#### 3. Installation du dossier Backend
+## 3. <u>Installation du dossier Backend</u>
 
 - Ouvrez un terminal à partir du sous-répertoire **backend** et exécutez la commande `npm install` afin d'installer toutes les dépendances.
 
-- Une fois les dépendances installées, veuillez exécuter la commande `npm start` afin de lancer le serveur.
+## 4. <u>Configuration des variables d'environnement</u>
 
-- Se connecter via les identifiants fournis dans le fichier TXT.
+A la racine du dossier "backend", veuillez créer un ficher `.env` (pour simplifié les test le fichier .env.exemple est fourni avec les informations correspondantes pour vous permettre de tester l'application, vous avez juste à le renommer en .env)
 
-#### 4. Configuration des variables d'environnement
+- Le fichier .env du back contient les variables d'environnement suivants :
+```
+DB_USERNAME=(username mongodb)
+DB_PASSWORD=(mot de passe mongodb)
+DB_CLUSTER=(cluster mongodb)
+CRYPTOJS_KEY_EMAIL=(chaîne de caractères aléatoire)
+JWT_KEY=(chaîne de caractères aléatoire)
+SECRET_TOKEN=(chaîne de caractères aléatoire)
+```
+---
+Même chose pour le front, un fichier .env doit être créé, pour les tests un fichier .env.exemple et fourni vous avez juste besoin de rebaptiser en .env
 
-A la racine du dossier "backend", veuillez créer un ficher `.env` (ici le fichier env. est fournis avec les informations correspondantes pour vous permettre de tester l'application, cependant il est normalement interdit de les fournirs pour permettre une sécurité au niveau de l'application)
+Le ficher `.env` à la racine du dossier "frontend", correspond à l'url du backend afin de faire des requêtes API. Cette application utilise l'url `http://localhost:5000` .
 
-- Le fichier .env contient les variables d'environnement suivants:
-  - DB_USERNAME=yass
-  - DB_PASSWORD=yacine59
-  - DB_CLUSTER=cluster0.gtfnfom.mongodb.net
-  - CRYPTOJS_KEY_EMAIL=yassinep7email
-  - JWT_KEY=(chaîne de caractères aléatoire)
-  - SECRET_TOKEN=(chaîne de caractères aléatoire)
+- Le fichier .env du front contient les variables d'environnement suivants :
+```
+REACT_APP_API_URL=(url de l'api back)
+```
 
+## 5. <u>Lancement des services</u>
 
-**Le ficher `.env` à la racine du dossier "frontend", correspond à l'url du backend afin de faire des requêtes API. Cette application utilise l'url `http://localhost:5000` .**
+Après avoir suivi les directives, vous pouvez effectuer un 'npm start dans un terminal ouvert sur le dossier backend et la même chose pour le dossier frontend
 
-#### 5. Environnement de développement
+## 6. <u>Environnement de développement</u>
 
 - Utilisation de **MongoDB** pour l'hébergement et la gestion de la base de données
 - Utilisation du framework **Express**
 - Utilisation du framework frontend **React**
 - Utilisation du runtime **Node.js**
 
-#### 6. Dépendances utilisées dans le frontend
+## 7. <u>Dépendances utilisées dans le frontend</u>
 
 - **axios :** crypte et hashe les mots de passe
 - **dotenv :** permet l'utilisation de variables d'environnement
@@ -65,7 +72,7 @@ A la racine du dossier "backend", veuillez créer un ficher `.env` (ici le fichi
 - **redux :** est une bibliothèque fournissant un conteneur d'état "predictable state container"
 - **redux-thunk :** est un middleware pour Redux permettant d'envoyer des actions en faisant des dispatchs
 
-#### 7changeemnbt. Dépendances utilisées dans le backend
+## 8. <u>Dépendances utilisées dans le backend</u>
 
 - **bcrypt :** crypte et hashe les mots de passe
 - **body-parser :** analyse le corps des requêtes
